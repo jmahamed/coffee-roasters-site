@@ -64,65 +64,50 @@ for (let i = 0; i < box_1.length; i++) {
       this.classList.add('active');
     });
   }
+  const summary = document.getElementById('summary');
+  const boxes = document.querySelectorAll('.box');
+  
+  let brewMethod = '';
+  let beanType = '';
+  let grindType = '';
+  let deliveryFrequency = '';
+  let quantity = '';
+  
+  boxes.forEach(box => {
+    box.addEventListener('click', () => {
+      const heading = box.querySelector('h4').textContent;
+      const parentId = box.parentElement.parentElement.id;
+      if (parentId === 'accordion-1') {
+        beanType = heading;
+      } else if (parentId === 'accordion-2') {
+        grindType = heading;
+      } else if (parentId === 'accordion-3') {
+        quantity = heading;
+      } else if (parentId === 'accordion-4'){
+        brewMethod = heading;
+      } else if (parentId === 'accordion-5') {
+        deliveryFrequency = heading;
+      }
+    summary.innerHTML = `“I drink my coffee using <span>${beanType}</span>, with a <span>${grindType}</span> type of bean. <span>${quantity}</span> ground ala <span>${brewMethod}</span>, sent to me <span>${deliveryFrequency}</span>.”`;
+const createPlanBtn = document.querySelector('.create-plan-btn');
+      createPlanBtn.classList.remove('disabled');
+      
+      // Disable accordion item if 'capsule' box is selected
 
+    });
+  });
+  
+  
+  const createPlanBtn = document.querySelector('.create-plan-btn');
 
-  
-  // const boxes = document.querySelectorAll('.box');
-  // const summary = document.querySelector('#summary');
-  
-  // boxes.forEach((box) => {
-  //   box.addEventListener('click', () => {
-  //     selectBox(box);
-  //     updateSummary();
-  //   });
-  // });
-  
-  // function selectBox(box) {
-  //   const selected = box.querySelector('.selected');
-  //   if (selected) {
-  //     selected.classList.remove('selected');
-  //   }
-  //   box.classList.add('selected');
-  // }
-  
-  // function getSelectedValue(box) {
-  //   const selected = box.querySelector('.selected');
-  //   if (selected) {
-  //     return selected.previousElementSibling.textContent.trim();
-  //   }
-  //   return '';
-  // }
-  
-  // function updateSummary() {
-  //   let drinkType = '';
-  //   let beanType = '';
-  //   let quantity = '';
-  //   let delivery = '';
-  
-  //   for (let i = 0; i < boxes.length; i++) {
-  //     const box = boxes[i];
-  //     const selectedValue = getSelectedValue(box);
-  //     const boxId = box.getAttribute('id');
-  
-  //     if (boxId === 'box-1' || boxId === 'box-2' || boxId === 'box-3') {
-  //       if (selectedValue) {
-  //         drinkType += selectedValue + ' ';
-  //       }
-  //     } else if (boxId === 'box-4' || boxId === 'box-5' || boxId === 'box-6') {
-  //       if (selectedValue) {
-  //         beanType += selectedValue + ' ';
-  //       }
-  //     } else if (boxId === 'box-7' || boxId === 'box-8' || boxId === 'box-9') {
-  //       if (selectedValue) {
-  //         quantity += selectedValue + ' ';
-  //       }
-  //     } else if (boxId === 'box-10' || boxId === 'box-11' || boxId === 'box-12') {
-  //       if (selectedValue) {
-  //         delivery += selectedValue + ' ';
-  //       }
-  //     }
-  //   }
-  
-  //   summary.textContent = `I drink my coffee using ${drinkType}, with a ${beanType}type of bean. ${quantity}, sent to me ${delivery}.`;
-  // }
+  createPlanBtn.addEventListener('click', () => {
+    const summaryOrder = document.querySelector('.summary-order');
+    const popup = document.querySelector('.popup');
+    popup.classList.add('active');
+    summaryOrder.textContent = summary.textContent;
+  });
 
+  const popup = document.querySelector('.popup');
+  popup.addEventListener('click', () => {
+    popup.classList.remove('active');
+  });
