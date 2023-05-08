@@ -1,0 +1,154 @@
+header {
+    margin-bottom: 43px;
+}
+
+.hero {
+    width: 1280px;
+    height: 450px;
+    background-image: url(/assets/about/desktop/image-hero-whitecup.jpg);
+    border-radius: 12px;
+    padding: 137px 750px 137px 85px;
+    margin-bottom: 168px;
+}
+
+.hero-txt {
+    width: 445px;
+    height: 176px;
+}
+
+.hero-txt h2 {
+    color: var(--light-cream);
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 24px;
+}
+
+.hero-txt p {
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--light-cream);
+}
+
+.commitment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1110px;
+    height: 520px;
+    margin-bottom: 256px;
+}
+
+.commitment img {
+    width: 445px;
+    height: 520px;
+    border-radius: 8px;
+}
+
+.commitment-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 540px;
+    height: 340px;
+}
+
+.commitment-txt h2 {
+    color: var(--dark-grey-blue);
+    font-size: 40px;
+    margin-bottom: 32px;
+}
+
+.commitment-txt p {
+    color: var(--dark-grey-blue);
+    opacity: 0.8;
+    mix-blend-mode: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.quality {
+    display: flex;
+    justify-content: space-around;
+    width: 1280px;
+    height: 474px;
+    background-color: #2C343E;
+    border-radius: 10px;
+    margin-bottom: 168px;
+}
+
+.quality img {
+    margin-top: -88px;
+    width: 445px;
+    height: 474px;
+    border-radius: 10px;
+
+}
+
+.quality-txt {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    height: 210px;
+    margin-top: 88px;
+}
+
+.quality-txt h2 {
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--light-cream);
+}
+
+.quality-txt p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--light-cream);
+    opacity: 0.8;
+    mix-blend-mode: normal;
+    margin-top: 32px;
+}
+
+.headquarters {
+    width: 1045px;
+    height: 366px;
+    margin-bottom: 168px;
+}
+
+.headquarters h4 {
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--grey);
+}
+
+.countries {
+    display: flex;
+    justify-content: space-between;
+    width: 1045px;
+    height: 262px;
+    margin-top: 72px;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 262px;
+    width: 285px;
+}
+
+.country img {
+    margin-bottom: 45px;
+}
+
+.country h3 {
+    font-size: 32px;
+    line-height: 36px;
+    color: var(--dark-grey-blue);
+    margin-bottom: 24px;
+}
+
+.country p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
